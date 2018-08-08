@@ -53,7 +53,7 @@ PHP 7.2 build for docker with xdebug,redis pdo. By default x-debug is disabled y
         
 #### Useful Commands 
         php bin/console make:controller
-        php bin/console debug:router
+        php bin/console debug:router        
         
-[for more]: https://symfony.com/doc/current/index.html        
+  [for more commands click here](https://symfony.com/doc/current/index.html)        
     
