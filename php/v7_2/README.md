@@ -12,7 +12,7 @@ PHP 7.2 build for docker with xdebug,redis pdo. By default x-debug is disabled y
 ## Getting Started
 
  ```
- docker-compose up
+ docker-compose up -d
  ```
 
 
@@ -26,7 +26,7 @@ PHP 7.2 build for docker with xdebug,redis pdo. By default x-debug is disabled y
  ./build.sh
  ```
 
-## Configure X-Debug
+## Configure X-Debug on PHPStorm
 #### Preference -> PHP -> Servers
     1. + (ADD)
 	   Name: Give the project Name

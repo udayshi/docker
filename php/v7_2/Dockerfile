@@ -49,7 +49,7 @@ RUN echo '' > /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 
 
-COPY manifest/app /app
+COPY app /app
 RUN mkdir -p /run/nginx/
 WORKDIR /app
 EXPOSE 80 443
