@@ -9,13 +9,23 @@ Encore
     .setManifestKeyPrefix('build/')
 
     .cleanupOutputBeforeBuild()
+    //enable versioning
+
+
     .enableSourceMaps(!Encore.isProduction())
 
     // the following line enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
+    //used by all application
+
+    //.createSharedEntry('layout', './assets/js/layout.js')
+
+
 
     // uncomment to define the assets of the project
-    //.addEntry('js/app', './assets/js/app.js')
+    .addEntry('js/app', './assets/js/app.js')
+    .enableVersioning()
+
     //.addStyleEntry('css/app', './assets/css/app.scss')
 
     // uncomment if you use TypeScript
@@ -23,6 +33,8 @@ Encore
 
     // uncomment if you use Sass/SCSS files
     //.enableSassLoader()
+
+
 
     // uncomment for legacy applications that require $/jQuery as a global variable
     //.autoProvidejQuery()

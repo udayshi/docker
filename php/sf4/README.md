@@ -26,7 +26,30 @@ PHP 7.2 build for docker with xdebug,redis pdo. By default x-debug is disabled y
  ./build.sh
  ```
 
-## Configure X-Debug on PHPStorm
+ 
+## Configure PHPSTORM 
+
+### Configure ES6
+```
+Preference-> Language & Frameworks -> Javascript
+     Select ECMASCRIPT 6
+```    
+
+### Configure Node
+```
+Preference-> Language & Frameworks -> Node.js and NPM
+    Enable Node
+```
+
+
+### Symfony
+``` 
+Preference-> Language & Frameworks -> PHP -> Symfony
+ 	Check Enable Plugin for this Project 	
+ 	change Web Directory to public
+ 
+```
+### Configure X-Debug on PHPStorm
 #### Preference -> PHP -> Servers
     1. + (ADD)
 	   Name: Give the project Name
@@ -55,5 +78,36 @@ PHP 7.2 build for docker with xdebug,redis pdo. By default x-debug is disabled y
         php bin/console make:controller
         php bin/console debug:router        
         
+#### Enable Versioning
+Add config/packages/framework.yaml
+```
+framework:            
+            assets:
+                json_manifest_path: '%kernel.project_dir%/public/build/manifest.json'
+```        
+and modify webpack.config.js
+```
+.enableVersioning()
+```
+
+#### Enable Saas
+```
+yarn add sass-loader node-sass --dev
+```
+and modify webpack.config.js
+```
+.enableSassLoader()
+```
+
+### Enable Shared Entry
+This is common modules used by all application
+```
+.createSharedEntry('layout', './assets/js/layout.js')
+```
+and after build include 
+    build/manifest.js //for caching
+    build/layout.js
+                        
+
   [for more commands click here](https://symfony.com/doc/current/index.html)        
     

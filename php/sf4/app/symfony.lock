@@ -95,6 +95,9 @@
             "ref": "509b1542f3180a1cfe248ade8b7bf5092c2d4127"
         }
     },
+    "markbaker/complex": {
+        "version": "1.4.6"
+    },
     "monolog/monolog": {
         "version": "1.23.0"
     },
@@ -115,6 +118,9 @@
     },
     "phpdocumentor/type-resolver": {
         "version": "0.4.0"
+    },
+    "phpoffice/phpspreadsheet": {
+        "version": "1.4.0"
     },
     "psr/cache": {
         "version": "1.0.1"

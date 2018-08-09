@@ -36,9 +36,20 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer self-update
 
 #Custom Extension
+RUN mkdir -p /usr/local/src
+WORKDIR /usr/local/src
 RUN pecl install xdebug  && docker-php-ext-enable xdebug
 RUN pecl install redis && docker-php-ext-enable redis
-RUN docker-php-ext-install -j$(nproc) zip
+RUN yarn global add create-react-app @angular/cli --prefix /usr/local
+RUN mkdir -p /usr/local/src/react
+WORKDIR /usr/local/src/react
+RUN npm init -y && \
+    yarn add webpack webpack-cli \
+    babel-core babel-loader babel-preset-env babel-preset-react\
+    html-webpack-plugin\
+    css-loader style-loader -D
+#RUN rm -rf /app/node_modules /app/yarn.lock
+
 ENV TZ=Europe/London
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY manifest/config/nginx.conf /etc/nginx/nginx.conf
