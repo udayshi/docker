@@ -15,7 +15,10 @@ class HelloController extends Controller
     public function index()
     {
 
-
+        $a=2;
+        $b=3;
+        $c=$a+$b;
+/*
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
         $sheet->setCellValue('A1', 'Hello World !');
@@ -27,7 +30,7 @@ class HelloController extends Controller
         $spreadsheet->setActiveSheetIndex(0);
         $sheet= $spreadsheet->getActiveSheet();
         $data=$sheet->toArray();
-
+*/
 
         return $this->render('hello/index.html.twig', [
             'controller_name' => 'HelloController',

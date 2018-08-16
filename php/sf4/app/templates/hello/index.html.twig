@@ -3,19 +3,71 @@
 {% block title %}Hello {{ controller_name }}!{% endblock %}
 
 {% block body %}
-<style>
+    <link rel="stylesheet" href="{{ asset('build/css/app.css') }}" />
+
+    <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
+<h1>Grid Demo</h1>
+<div class="grid-container">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <div class="header">
+        Header
+  </div>
+    <div class="side_bar">
+        Side Bar
+    </div>
+    <div class="content_body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda commodi cupiditate deserunt dolorum eos error, esse eum fugit, impedit ipsam iure modi molestias obcaecati odio quae recusandae repellendus unde.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda commodi cupiditate deserunt dolorum eos error, esse eum fugit, impedit ipsam iure modi molestias obcaecati odio quae recusandae repellendus unde.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda commodi cupiditate deserunt dolorum eos error, esse eum fugit, impedit ipsam iure modi molestias obcaecati odio quae recusandae repellendus unde.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda commodi cupiditate deserunt dolorum eos error, esse eum fugit, impedit ipsam iure modi molestias obcaecati odio quae recusandae repellendus unde.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda commodi cupiditate deserunt dolorum eos error, esse eum fugit, impedit ipsam iure modi molestias obcaecati odio quae recusandae repellendus unde.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda commodi cupiditate deserunt dolorum eos error, esse eum fugit, impedit ipsam iure modi molestias obcaecati odio quae recusandae repellendus unde.
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'src/Controller/HelloController.php'|file_link(0) }}">src/Controller/HelloController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'templates/hello/index.html.twig'|file_link(0) }}">templates/hello/index.html.twig</a></code></li>
-    </ul>
+    </div>
+    <div class="footer">
+        Footer
+    </div>
 </div>
+
+    <style>
+        .grid-container {
+            margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* three columns  */
+        grid-template-rows: 60px 60px 100% 60px ; /* two rows  */
+        grid-template-areas:
+
+                "header header header"
+                ". . side_bar"
+                "content_body content_body content_body "
+                "footer footer footer";
+
+
+        }
+
+        .header {
+        grid-area: header;
+            background: red;
+        }
+        .side_bar {
+            grid-area: side_bar;
+            background: orange;
+        }
+        .content_body {
+            grid-area: content_body;
+            background: yellow;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: blue;
+        }
+
+
+    </style>
     <script src="{{ asset('build/js/app.js') }}"></script>
 {% endblock %}

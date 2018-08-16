@@ -142,3 +142,16 @@
 2018-08-09 10:44:54,693 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2018-08-09 10:44:54,693 INFO success: clean_cache entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2018-08-09 10:44:57,218 INFO exited: clean_cache (exit status 0; expected)
+2018-08-09 15:01:24,842 WARN received SIGTERM indicating exit request
+2018-08-09 15:01:24,844 INFO waiting for php-fpm, nginx to die
+2018-08-09 15:01:25,848 INFO stopped: nginx (exit status 0)
+2018-08-09 15:01:25,853 INFO stopped: php-fpm (exit status 0)
+2018-08-14 10:32:15,886 CRIT Supervisor running as root (no user in config file)
+2018-08-14 10:32:15,892 INFO supervisord started with pid 1
+2018-08-14 10:32:16,896 INFO spawned: 'php-fpm' with pid 15
+2018-08-14 10:32:16,897 INFO spawned: 'nginx' with pid 16
+2018-08-14 10:32:16,899 INFO spawned: 'clean_cache' with pid 17
+2018-08-14 10:32:18,170 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-08-14 10:32:18,170 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-08-14 10:32:18,170 INFO success: clean_cache entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-08-14 10:32:19,230 INFO exited: clean_cache (exit status 0; expected)

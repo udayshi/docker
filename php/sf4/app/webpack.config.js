@@ -26,13 +26,13 @@ Encore
     .addEntry('js/app', './assets/js/app.js')
     .enableVersioning()
 
-    //.addStyleEntry('css/app', './assets/css/app.scss')
+    .addStyleEntry('css/app', './assets/css/app.scss')
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
 
     // uncomment if you use Sass/SCSS files
-    //.enableSassLoader()
+    .enableSassLoader()
 
 
 
