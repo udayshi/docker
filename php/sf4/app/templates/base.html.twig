@@ -13,5 +13,10 @@
             <script src="{{ asset('build/js/app.js') }}"></script>
         {% endblock %}
 
+{% if app.environment() == "dev" %}
+        <link href="http://localhost:8080/styles/style.css" rel="stylesheet">
+        <script type="text/javascript" src="http://localhost:8080/bundle.js"></script>
+        {% endif %}
+
     </body>
 </html>

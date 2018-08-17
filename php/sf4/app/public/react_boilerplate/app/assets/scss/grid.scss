@@ -1,0 +1,44 @@
+.grid-container {
+  margin: 0 auto;
+  width:1024px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* three columns  */
+  grid-template-rows: 60px 60px 100% 60px ; /* two rows  */
+  grid-template-areas:
+
+          "footer footer footer"
+          ". . side_bar"
+
+          "content_body content_body content_body"
+          "header header header";
+
+
+
+
+
+
+
+
+}
+
+.header {
+  grid-area: header;
+  background: red;
+}
+.side_bar {
+  grid-area: side_bar;
+
+  background: orange;
+}
+.content_body {
+  grid-area: content_body;
+  background: yellow;
+
+
+}
+
+.footer {
+  grid-area: footer;
+  background: blue;
+}

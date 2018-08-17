@@ -17,6 +17,7 @@
   </div>
     <div class="side_bar">
         Side Bar
+
     </div>
     <div class="content_body">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda commodi cupiditate deserunt dolorum eos error, esse eum fugit, impedit ipsam iure modi molestias obcaecati odio quae recusandae repellendus unde.
@@ -43,7 +44,7 @@
 
                 "header header header"
                 ". . side_bar"
-                "content_body content_body content_body "
+                "content_body content_body content_body"
                 "footer footer footer";
 
 
@@ -55,11 +56,14 @@
         }
         .side_bar {
             grid-area: side_bar;
+
             background: orange;
         }
         .content_body {
             grid-area: content_body;
             background: yellow;
+
+
         }
 
         .footer {
@@ -69,5 +73,5 @@
 
 
     </style>
-    <script src="{{ asset('build/js/app.js') }}"></script>
+    
 {% endblock %}

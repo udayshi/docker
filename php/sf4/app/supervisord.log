@@ -155,3 +155,29 @@
 2018-08-14 10:32:18,170 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2018-08-14 10:32:18,170 INFO success: clean_cache entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2018-08-14 10:32:19,230 INFO exited: clean_cache (exit status 0; expected)
+2018-08-17 09:09:03,169 WARN received SIGTERM indicating exit request
+2018-08-17 09:09:03,191 INFO waiting for php-fpm, nginx to die
+2018-08-17 09:09:04,194 INFO stopped: nginx (exit status 0)
+2018-08-17 09:09:04,200 INFO stopped: php-fpm (exit status 0)
+2018-08-17 10:53:57,781 CRIT Supervisor running as root (no user in config file)
+2018-08-17 10:53:57,787 INFO supervisord started with pid 1
+2018-08-17 10:53:58,789 INFO spawned: 'php-fpm' with pid 9
+2018-08-17 10:53:58,794 INFO spawned: 'nginx' with pid 10
+2018-08-17 10:53:58,796 INFO spawned: 'clean_cache' with pid 11
+2018-08-17 10:53:59,985 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-08-17 10:53:59,985 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-08-17 10:53:59,985 INFO success: clean_cache entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-08-17 10:53:59,985 INFO exited: clean_cache (exit status 0; expected)
+2018-08-17 12:23:31,610 WARN received SIGTERM indicating exit request
+2018-08-17 12:23:31,613 INFO waiting for php-fpm, nginx to die
+2018-08-17 12:23:32,616 INFO stopped: nginx (exit status 0)
+2018-08-17 12:23:32,620 INFO stopped: php-fpm (exit status 0)
+2018-08-17 12:27:17,504 CRIT Supervisor running as root (no user in config file)
+2018-08-17 12:27:17,512 INFO supervisord started with pid 1
+2018-08-17 12:27:18,516 INFO spawned: 'php-fpm' with pid 15
+2018-08-17 12:27:18,517 INFO spawned: 'nginx' with pid 16
+2018-08-17 12:27:18,518 INFO spawned: 'clean_cache' with pid 17
+2018-08-17 12:27:19,555 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-08-17 12:27:19,555 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-08-17 12:27:19,555 INFO success: clean_cache entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2018-08-17 12:27:23,613 INFO exited: clean_cache (exit status 0; expected)

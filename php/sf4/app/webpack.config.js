@@ -12,10 +12,10 @@ Encore
     //enable versioning
 
 
-    .enableSourceMaps(!Encore.isProduction())
-
+    //.enableSourceMaps(!Encore.isProduction())
+    .enableSourceMaps(true)
     // the following line enables hashed filenames (e.g. app.abc123.css)
-    .enableVersioning(Encore.isProduction())
+    //.enableVersioning(Encore.isProduction())
     //used by all application
 
     //.createSharedEntry('layout', './assets/js/layout.js')
@@ -39,5 +39,5 @@ Encore
     // uncomment for legacy applications that require $/jQuery as a global variable
     //.autoProvidejQuery()
 ;
-
+console.log(Encore.getWebpackConfig());
 module.exports = Encore.getWebpackConfig();
