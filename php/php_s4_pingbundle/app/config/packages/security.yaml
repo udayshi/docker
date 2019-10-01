@@ -1,0 +1,30 @@
+security:
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_SUPER_ADMIN
+
+    providers:
+        db:
+            entity:
+                class: App:User
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            provider: db
+            pattern: ^/
+            stateless: false
+            logout:
+                path: /logout
+                target: /unauthorised
+                invalidate_session: true
+            anonymous: true
+            guard:
+                authenticators:
+                    - pingbundle.authenticator
+    access_control:
+        - { path: ^/unauthorised, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/logout, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, role: ROLE_SUPER_ADMIN }

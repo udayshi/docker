@@ -1,4 +1,4 @@
-FROM php:7.2-fpm
+FROM php:7.3-fpm
 RUN apt-get update \
 && apt-get install -y \
 	        bash \
@@ -37,11 +37,11 @@ RUN composer self-update
 
 #Custom Extension
 RUN pecl install xdebug  && docker-php-ext-enable xdebug
-RUN pecl install redis && docker-php-ext-enable redis
-RUN docker-php-ext-install -j$(nproc) zip
+#RUN pecl install redis && docker-php-ext-enable redis
+#RUN docker-php-ext-install -j$(nproc) zip
 
 
-RUN pecl channel-update pecl.php.net && pecl install mcrypt-1.0.1
+RUN pecl channel-update pecl.php.net && pecl install mcrypt-1.0.2
 ENV TZ=Europe/London
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 COPY manifest/config/nginx.conf /etc/nginx/nginx.conf
