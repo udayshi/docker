@@ -1,3 +1,0 @@
-#!/bin/bash
-echo "Cleaning Cache"
-rm -rf /app/var/cache/* && rm -rf /app/var/log/*
