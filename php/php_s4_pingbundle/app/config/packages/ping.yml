@@ -1,6 +1,0 @@
-ping:
-    idp: 'LWW:PRO:37CITYWifi:SAML2:IdP'
-    url: 'https://saml.interpublic.com/sp/startSSO.ping'
-    agent_config: "use-verbose-error-messages=false\ncookie-path=/\ncipher-suite=2\nobfuscate-password=false\ntoken-notbefore-tolerance=600\ntoken-renewuntil=43200\nuse-sunjce=false\npassword=UGFzc3dvcmQx\ntoken-name=opentoken\ntoken-lifetime=300\nuse-cookie=false"
-    unauthorised_url: 'unauthorised'
-    additional_data: ~
