@@ -3,6 +3,6 @@
 CONF=alpine3.11.3-base
 TAG=udaysh/$CONF
 
-docker  build --rm  -f $CONF  -t udaysh/$CONF .
+docker  build --rm  -f $CONF  -t udaysh/$CONF:latest .
 #docker rmi -f $(docker images -f "dangling=true" -q)
-docker push udaysh/$CONF
+docker push udaysh/$CONF:latest
