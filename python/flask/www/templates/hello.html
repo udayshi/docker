@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Hello world</title>
+</head>
+<body>
+<h1>Hello {{data.name}} and he know following lang:</h1>
+<ul>
+    {% for lang in data.knows %}
+    <li>{{lang}}</li>
+    {%endfor%}
+</ul>
+
+</body>
+
+</html>

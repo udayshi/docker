@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  web:
+    image: udaysh/alpine3.11.3-python_flask
+    labels:
+      - "com.lowecloud.proxy=flask.docker"
+#    volumes:
+#      - "./www:/app/"
+    network_mode: bridge

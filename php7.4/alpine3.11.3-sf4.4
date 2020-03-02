@@ -1,0 +1,14 @@
+FROM udaysh/alpine3.11.3-php7.4.3.dev:latest
+MAINTAINER shiuday@gmail.com
+
+WORKDIR /usr/local/src
+
+#Install symfony cli
+RUN curl -sS https://get.symfony.com/cli/installer | bash && \
+    mv /root/.symfony/bin/symfony /usr/bin/
+
+#RUN symfony new /app --version=4.4
+ADD www/sf4.4 app/
+
+COPY manifest/nginx.sf4.conf /etc/nginx/nginx.conf
+COPY manifest/supervisord.conf.dev /etc/supervisor/conf.d/supervisord.conf

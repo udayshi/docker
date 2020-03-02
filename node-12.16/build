@@ -1,0 +1,8 @@
+#!/bin/bash
+
+CONF=alpine3.11.3-node-12.16
+TAG=udaysh/$CONF
+
+docker  build   -f $CONF  -t udaysh/$CONF .
+#docker rmi -f $(docker images -f "dangling=true" -q)
+#docker push udaysh/$CONF

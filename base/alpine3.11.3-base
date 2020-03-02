@@ -1,0 +1,21 @@
+FROM alpine:3.11.3
+MAINTAINER shiuday@gmail.com
+RUN apk upgrade && \
+    apk update && \
+    mkdir -p /usr/local/src
+
+RUN apk --no-cache --update add \
+    alpine-sdk \
+    autoconf \
+    libxml2-dev \
+    sqlite-dev \
+    curl-dev \
+    bash \
+    vim \
+    openssl-dev \
+    python \
+    linux-headers \
+    nginx \
+    supervisor
+
+

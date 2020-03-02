@@ -1,0 +1,15 @@
+#!/bin/bash
+
+CONF=alpine3.11.3-php7.4.3
+TAG=udaysh/$CONF
+
+if [ $# -eq 0 ]
+  then
+	 docker build --rm  -f $CONF  -t udaysh/$CONF .
+else
+  CONF=$1
+
+  docker  build --rm  -f $CONF  -t udaysh/$CONF .
+fi
+#docker rmi -f $(docker images -f "dangling=true" -q)
+#docker push udaysh/$CONF

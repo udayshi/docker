@@ -1,0 +1,140 @@
+2020-03-02 12:49:23,541 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-03-02 12:49:23,544 INFO supervisord started with pid 1
+2020-03-02 12:49:24,549 INFO spawned: 'nginx' with pid 7
+2020-03-02 12:49:24,552 INFO spawnerr: can't find command 'node'
+2020-03-02 12:49:25,555 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:49:25,555 INFO spawnerr: can't find command 'node'
+2020-03-02 12:49:27,560 INFO spawnerr: can't find command 'node'
+2020-03-02 12:49:30,573 INFO spawnerr: can't find command 'node'
+2020-03-02 12:49:34,583 INFO spawnerr: can't find command 'node'
+2020-03-02 12:49:40,321 INFO spawnerr: can't find command 'node'
+2020-03-02 12:49:40,322 INFO gave up: node-app entered FATAL state, too many start retries too quickly
+2020-03-02 12:58:08,687 WARN received SIGTERM indicating exit request
+2020-03-02 12:58:08,688 INFO waiting for nginx to die
+2020-03-02 12:58:09,696 INFO stopped: nginx (exit status 0)
+2020-03-02 12:58:10,373 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-03-02 12:58:10,377 INFO supervisord started with pid 1
+2020-03-02 12:58:11,381 INFO spawned: 'nginx' with pid 7
+2020-03-02 12:58:11,385 INFO spawned: 'node-app' with pid 8
+2020-03-02 12:58:11,434 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:12,437 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:58:12,439 INFO spawned: 'node-app' with pid 10
+2020-03-02 12:58:13,478 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:58:13,478 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:14,483 INFO spawned: 'node-app' with pid 11
+2020-03-02 12:58:14,512 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:15,515 INFO spawned: 'node-app' with pid 12
+2020-03-02 12:58:15,545 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:17,550 INFO spawned: 'node-app' with pid 13
+2020-03-02 12:58:17,578 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:20,589 INFO spawned: 'node-app' with pid 14
+2020-03-02 12:58:20,621 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:24,628 INFO spawned: 'node-app' with pid 15
+2020-03-02 12:58:24,660 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:29,759 INFO spawned: 'node-app' with pid 16
+2020-03-02 12:58:30,794 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:58:30,794 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:31,798 INFO spawned: 'node-app' with pid 17
+2020-03-02 12:58:31,828 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:32,835 INFO spawned: 'node-app' with pid 18
+2020-03-02 12:58:32,863 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:34,871 INFO spawned: 'node-app' with pid 19
+2020-03-02 12:58:34,903 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:37,915 INFO spawned: 'node-app' with pid 20
+2020-03-02 12:58:38,952 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:58:38,953 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:39,957 INFO spawned: 'node-app' with pid 21
+2020-03-02 12:58:39,988 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:40,992 INFO spawned: 'node-app' with pid 22
+2020-03-02 12:58:42,023 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:58:42,024 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:43,027 INFO spawned: 'node-app' with pid 23
+2020-03-02 12:58:44,060 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:58:44,060 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:45,065 INFO spawned: 'node-app' with pid 24
+2020-03-02 12:58:45,096 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:46,101 INFO spawned: 'node-app' with pid 25
+2020-03-02 12:58:46,132 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:48,139 INFO spawned: 'node-app' with pid 26
+2020-03-02 12:58:49,174 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:58:49,175 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:50,179 INFO spawned: 'node-app' with pid 27
+2020-03-02 12:58:51,212 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:58:51,213 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:52,216 INFO spawned: 'node-app' with pid 28
+2020-03-02 12:58:53,251 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:58:53,251 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:54,255 INFO spawned: 'node-app' with pid 29
+2020-03-02 12:58:54,286 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:55,290 INFO spawned: 'node-app' with pid 30
+2020-03-02 12:58:55,322 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:58:57,327 INFO spawned: 'node-app' with pid 31
+2020-03-02 12:58:57,357 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:00,370 INFO spawned: 'node-app' with pid 32
+2020-03-02 12:59:00,411 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:04,424 INFO spawned: 'node-app' with pid 40
+2020-03-02 12:59:05,460 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:59:05,460 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:06,463 INFO spawned: 'node-app' with pid 41
+2020-03-02 12:59:06,493 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:07,498 INFO spawned: 'node-app' with pid 42
+2020-03-02 12:59:08,530 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:59:08,530 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:09,533 INFO spawned: 'node-app' with pid 44
+2020-03-02 12:59:09,560 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:10,563 INFO spawned: 'node-app' with pid 45
+2020-03-02 12:59:10,596 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:12,605 INFO spawned: 'node-app' with pid 46
+2020-03-02 12:59:12,634 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:15,647 INFO spawned: 'node-app' with pid 47
+2020-03-02 12:59:15,683 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:19,693 INFO spawned: 'node-app' with pid 48
+2020-03-02 12:59:20,726 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:59:20,727 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:21,732 INFO spawned: 'node-app' with pid 49
+2020-03-02 12:59:21,761 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:22,764 INFO spawned: 'node-app' with pid 50
+2020-03-02 12:59:22,794 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:24,801 INFO spawned: 'node-app' with pid 51
+2020-03-02 12:59:25,838 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:59:25,839 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:26,842 INFO spawned: 'node-app' with pid 52
+2020-03-02 12:59:27,876 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:59:27,877 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:28,882 INFO spawned: 'node-app' with pid 53
+2020-03-02 12:59:28,915 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:29,918 INFO spawned: 'node-app' with pid 54
+2020-03-02 12:59:29,946 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:31,954 INFO spawned: 'node-app' with pid 55
+2020-03-02 12:59:32,989 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:59:32,990 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:33,998 INFO spawned: 'node-app' with pid 56
+2020-03-02 12:59:35,031 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:59:35,032 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:36,035 INFO spawned: 'node-app' with pid 57
+2020-03-02 12:59:36,063 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:37,068 INFO spawned: 'node-app' with pid 58
+2020-03-02 12:59:37,099 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:39,103 INFO spawned: 'node-app' with pid 59
+2020-03-02 12:59:39,156 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:42,164 INFO spawned: 'node-app' with pid 60
+2020-03-02 12:59:42,194 INFO exited: node-app (exit status 127; not expected)
+2020-03-02 12:59:44,199 WARN received SIGTERM indicating exit request
+2020-03-02 12:59:44,199 INFO waiting for nginx to die
+2020-03-02 12:59:45,211 INFO stopped: nginx (exit status 0)
+2020-03-02 12:59:45,810 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-03-02 12:59:45,814 INFO supervisord started with pid 1
+2020-03-02 12:59:46,820 INFO spawned: 'nginx' with pid 7
+2020-03-02 12:59:46,824 INFO spawned: 'node-app' with pid 8
+2020-03-02 12:59:47,888 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 12:59:47,889 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 13:02:06,670 WARN received SIGTERM indicating exit request
+2020-03-02 13:02:06,674 INFO waiting for nginx, node-app to die
+2020-03-02 13:02:06,674 INFO stopped: node-app (terminated by SIGTERM)
+2020-03-02 13:02:06,680 INFO stopped: nginx (exit status 0)
+2020-03-02 13:41:15,150 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2020-03-02 13:41:15,159 INFO supervisord started with pid 1
+2020-03-02 13:41:16,165 INFO spawned: 'nginx' with pid 7
+2020-03-02 13:41:16,167 INFO spawned: 'node-app' with pid 8
+2020-03-02 13:41:17,229 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2020-03-02 13:41:17,229 INFO success: node-app entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

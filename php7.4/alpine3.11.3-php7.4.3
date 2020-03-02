@@ -1,0 +1,59 @@
+FROM udaysh/alpine3.11.3-base:latest
+MAINTAINER shiuday@gmail.com
+
+
+WORKDIR  /usr/local/src
+
+RUN wget https://www.php.net/distributions/php-7.4.3.tar.gz && \
+    tar -zxf php-7.4.3.tar.gz && \
+    cd /usr/local/src/php-7.4.3 && \
+    ./configure --enable-fpm --enable-debug --with-openssl --with-pear --with-curl &&  \
+    make && \
+    make install
+
+RUN apk add libmcrypt-dev && \
+    pecl channel-update pecl.php.net && \
+    printf "\n" | pecl install mcrypt xdebug
+
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+    chmod +x /usr/local/bin/composer && \
+    composer self-update
+
+
+
+#Compile and build new module
+RUN apk add oniguruma-dev && \
+    cd /usr/local/src/php-7.4.3 && \
+    ./configure --enable-fpm --enable-debug --with-openssl --with-pear --with-curl --with-iconv --enable-mbstring  &&  \
+    make && \
+    make install
+
+
+RUN  git config --global user.email "php7.4@php.net" && \
+  git config --global user.name "Alpine Container"
+
+
+ENV TZ=Europe/London
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+
+#RUN rm -rf /usr/local/src* && \
+#    rm -rf /var/cache/apk/* && \
+#    rm -rf /usr/local/etc && \
+#    apk del  alpine-sdk autoconf python linux-headers
+
+ADD ./manifest/php /usr/local/etc
+
+
+COPY manifest/nginx.conf /etc/nginx/nginx.conf
+COPY manifest/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+
+EXPOSE 80 443
+ADD www/base app/
+WORKDIR /app
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+
+
+
+

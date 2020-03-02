@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run  --rm --name=alpine  -i -t udaysh/alpine3.11.3-base /bin/bash

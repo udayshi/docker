@@ -1,0 +1,9 @@
+version: "3.3"
+services:
+  web:
+    image: udaysh/alpine3.11.3-node-12.16
+    labels:
+      - "com.lowecloud.proxy=node12.16.docker"
+    volumes:
+      - "./www:/app/"
+    network_mode: bridge
