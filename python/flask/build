@@ -5,4 +5,4 @@ TAG=udaysh/$CONF
 
 docker  build   -f $CONF  -t udaysh/$CONF .
 #docker rmi -f $(docker images -f "dangling=true" -q)
-#docker push udaysh/$CONF
+docker push udaysh/$CONF

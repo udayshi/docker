@@ -1,1 +1,16 @@
 #!/bin/bash
+
+cd base
+./build
+
+cd ../node-12.16/
+./build
+
+cd ../php7.4/
+./build
+./build alpine3.11.3-php7.4.3.dev
+./build alpine3.11.3-sf5.0
+
+
+cd ../python/flask
+./build
