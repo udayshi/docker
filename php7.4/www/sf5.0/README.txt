@@ -17,7 +17,7 @@ composer require monolog  #Logger
 composer require debug --dev
 composer require profiler --dev
 composer require make --dev
-
+composer require phpunit --dev
 
 composer require sec-checker
 
@@ -29,6 +29,11 @@ composer update
 bin/console make:controller DefaultController
 
 
+#Setting PHPunit
+composer require phpunit --dev
+bin/phpunit
+
+cd /usr/local/bin && ln -sf /app/bin/phpunit phpunit
 
 #Set the session path and make sure its writeable
 # config/packages/framework.yaml
