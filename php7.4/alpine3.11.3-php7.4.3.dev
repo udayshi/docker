@@ -2,9 +2,6 @@ FROM udaysh/alpine3.11.3-php7.4.3:latest
 MAINTAINER shiuday@gmail.com
 
 WORKDIR /usr/local/src
-RUN apk add curl && \
-    curl -LsS https://phar.phpunit.de/phpunit.phar -o /usr/local/bin/phpunit && \
-    chmod +x /usr/local/bin/phpunit &&\
-    apk del curl
-
+RUN apk add curl mysql-client
+WORKDIR /app
 COPY manifest/supervisord.conf.dev /etc/supervisor/conf.d/supervisord.conf

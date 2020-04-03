@@ -1,0 +1,24 @@
+{
+  "name": "tst",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "encore dev --watch",
+    "build": "encore prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@symfony/webpack-encore": "^0.28.3",
+    "webpack-notifier": "^1.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "4.*",
+    "holderjs": "^2.9.6",
+    "jquery": "3.*",
+    "popper.js": "1.12.9"
+  }
+}

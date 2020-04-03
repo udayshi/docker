@@ -1,25 +1,32 @@
 version: "3.3"
 services:
-  php74:
-    image: udaysh/alpine3.11.3-php7.4.3.dev
-    labels:
-      - "com.lowecloud.proxy=php7.4.docker"
-    volumes:
-      - "./www/base:/app"
-    network_mode: bridge
-
-  sf44:
-    image: udaysh/alpine3.11.3-sf4.4
-    labels:
-      - "com.lowecloud.proxy=sf4.4.docker"
-    volumes:
-      - "./www/sf4.4:/app"
-    network_mode: bridge
+#  php74:
+#    image: udaysh/alpine3.11.3-php7.4.3.dev
+#    labels:
+#      - "com.lowecloud.proxy=php7.4.docker"
+#    volumes:
+#      - "./www/base:/app"
+#    network_mode: bridge
+#
+#  sf44:
+#    image: udaysh/alpine3.11.3-sf4.4
+#    labels:
+#      - "com.lowecloud.proxy=sf4.4.docker"
+#    volumes:
+#      - "./www/sf4.4:/app"
+#    network_mode: bridge
 
   sf50:
-    image: udaysh/alpine3.11.3-sf5.0
+    image: udaysh/alpine3.11.3-sf5.0:latest
     labels:
       - "com.lowecloud.proxy=sf5.0.docker"
     volumes:
       - "./www/sf5.0:/app"
+    network_mode: bridge
+
+  db:
+    image: udaysh/db_mariadb-10
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=symfony
     network_mode: bridge

@@ -1,40 +1,34 @@
 FROM udaysh/alpine3.11.3-base:latest
 MAINTAINER shiuday@gmail.com
 
+RUN  git config --global user.email "php7.4@php.net" && \
+git config --global user.name "Alpine Container"
+
+
+ENV TZ=Europe/London
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 WORKDIR  /usr/local/src
 
 RUN wget https://www.php.net/distributions/php-7.4.3.tar.gz && \
-    tar -zxf php-7.4.3.tar.gz && \
-    cd /usr/local/src/php-7.4.3 && \
-    ./configure --enable-fpm --enable-debug --with-openssl --with-pear --with-curl &&  \
+    tar -zxf php-7.4.3.tar.gz
+
+RUN apk add --no-cache  libmcrypt-dev oniguruma-dev
+RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ --allow-untrusted gnu-libiconv
+ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
+
+#Compile and build  module
+RUN cd /usr/local/src/php-7.4.3 && \
+    ./configure --enable-fpm --enable-debug --with-openssl --with-pear --with-curl --with-iconv --enable-mbstring --enable-mysqlnd --with-pdo-mysql &&  \
     make && \
     make install
 
-RUN apk add libmcrypt-dev && \
-    pecl channel-update pecl.php.net && \
+RUN  pecl channel-update pecl.php.net && \
     printf "\n" | pecl install mcrypt xdebug
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
     chmod +x /usr/local/bin/composer && \
     composer self-update
-
-
-
-#Compile and build new module
-RUN apk add oniguruma-dev && \
-    cd /usr/local/src/php-7.4.3 && \
-    ./configure --enable-fpm --enable-debug --with-openssl --with-pear --with-curl --with-iconv --enable-mbstring  &&  \
-    make && \
-    make install
-
-
-RUN  git config --global user.email "php7.4@php.net" && \
-  git config --global user.name "Alpine Container"
-
-
-ENV TZ=Europe/London
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 
 #RUN rm -rf /usr/local/src* && \
