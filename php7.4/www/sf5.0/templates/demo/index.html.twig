@@ -2,17 +2,17 @@
 
 {% block body %}
 
-<ul>
-    {% for item in list %}
-       <li>{{ item.name }}</li>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for item in list %}
+            <li>{{ item.name }}</li>
+        {% endfor %}
+    </ul>
 
     <a href="{{ path('redirect_link') }}">Go</a> <br/>
 
     <b>{{ twig_global_val }}</b> is defined in config/packages/twig.yaml <br/>
 
-{{ dump() }} will dumps all accessable variable <br/>
+    {{ dump() }} will dumps all accessable variable <br/>
 
     {{ 'hello'|usPrefix }} This is defined in app/Twig/TwigExtension.php <br/>
 {% endblock %}

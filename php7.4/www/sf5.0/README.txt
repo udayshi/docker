@@ -77,3 +77,7 @@ yarn install
   npm run build
 
 ##############################
+
+
+#Adding Fixtures
+composer require --dev orm-fixtures

@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites/>
+<testsuites>
+  <testsuite name="Project Test Suite" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.013491">
+    <testsuite name="App\Tests\Entity\DemoTest" file="/app/tests/Entity/DemoTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.013491">
+      <testcase name="testEntityDemo" class="App\Tests\Entity\DemoTest" classname="App.Tests.Entity.DemoTest" file="/app/tests/Entity/DemoTest.php" line="10" assertions="1" time="0.013491"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,7 +1,26 @@
-FROM udaysh/alpine3.11.3-php7.4.3:latest
+FROM udaysh/alpine_sf5
 MAINTAINER shiuday@gmail.com
 
-WORKDIR /usr/local/src
-RUN apk add curl mysql-client
+
+WORKDIR  /usr/local/src
+
+RUN apk add mysql-client
+
+RUN wget https://nodejs.org/dist/v12.16.1/node-v12.16.1.tar.gz
+
+RUN tar xf node-v12.16.1.tar.gz && \
+    cd node-v12.16.1 && \
+    ./configure  --prefix=/usr/local/node-v12.16.1 && \
+    make && \
+    make install
+
+
+ENV PATH=$PATH:/usr/local/node-v12.16.1/bin
+RUN   npm i -g yarn
+
+
+RUN  pecl channel-update pecl.php.net && \
+    printf "\n" | pecl install xdebug
+
 WORKDIR /app
 COPY manifest/supervisord.conf.dev /etc/supervisor/conf.d/supervisord.conf

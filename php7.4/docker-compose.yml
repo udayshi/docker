@@ -17,7 +17,7 @@ services:
 #    network_mode: bridge
 
   sf50:
-    image: udaysh/alpine3.11.3-sf5.0:latest
+    image: udaysh/alpine3.11.3-sf5.0.dev:latest
     labels:
       - "com.lowecloud.proxy=sf5.0.docker"
     volumes:
